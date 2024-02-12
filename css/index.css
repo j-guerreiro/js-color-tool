@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Pixelify+Sans:wght@400;500&family=Roboto+Mono&family=Rubik:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Titillium+Web:wght@200;400;700&display=swap');
+
+* {
+  font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+  align-items: center;
+  background-color: floralwhite;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-container {
+    width: 380px;
+    margin: 0 40%;
+  }
+}
