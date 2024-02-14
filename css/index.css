@@ -58,10 +58,12 @@ label,
   background: floralwhite;
   border-radius: 10px;
   width: 40px;
+  height: 19px;
 }
 
 input[type="checkbox" i] {
   transition: ease-in-out 0.3s;
+  vertical-align: top;
 }
 
 input[type="checkbox" i]:checked {
