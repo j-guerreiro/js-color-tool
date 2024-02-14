@@ -4,16 +4,80 @@
   font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-image: url(/assets/luke-chesser-eICUFSeirc0-unsplash.jpg);
+}
+
 .app-container {
   align-items: center;
-  background-color: floralwhite;
+  background-color: slategray;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px 2px darkseagreen;
   display: flex;
   flex-direction: column;
 }
 
+.app-container h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+.lighten,
+.darken {
+  color: floralwhite;
+  margin: 5px;
+  letter-spacing: 5px;
+}
+
+.color-input-label input {
+  border-radius: 6px;
+  border: 1px solid aqua;
+  padding: 5px;
+}
+
+.color-box-input,
+.color-box-output {
+  border: 1px solid papayawhip;
+  height: 40px;
+  width: 280px;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.switcher {
+  display: flex;
+  margin: 30px;
+}
+
+.switch {
+  border: 1px solid cornflowerblue;
+  background: floralwhite;
+  border-radius: 10px;
+  width: 40px;
+}
+
+input[type="checkbox" i] {
+  transition: ease-in-out 0.3s;
+}
+
+input[type="checkbox" i]:checked {
+  transform: translateX(17px);
+}
+
 @media screen and (min-width: 1024px) {
   .app-container {
-    width: 380px;
-    margin: 0 40%;
+    margin: 20px 35%;
+    padding: 30px;
+    width: 530px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .app-container {
+    padding: 30px;
   }
 }
