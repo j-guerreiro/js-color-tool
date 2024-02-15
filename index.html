@@ -21,10 +21,17 @@
       <div class="switcher">
         <div class="lighten">Lighten</div>
         <!-- Rounded switch -->
-        <label class="switch">
-          <input type="checkbox">
-        </label>
+        <input type="checkbox" id="switchCheckbox">
+        <label class="switch" for="switchCheckbox"></label>
         <div class="darken">Darken</div>
+      </div>
+
+      <div class="color-range">
+        <input type="range" min="0" max="100" value="0" oninput="rangeValue.innerText = this.value">
+        <div class="value">
+          <p id="rangeValue">0</p>
+          <p>%</p>
+        </div>
       </div>
 
       <div class="input-color">

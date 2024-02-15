@@ -31,6 +31,7 @@ label,
   color: floralwhite;
   margin: 5px;
   letter-spacing: 5px;
+  text-align: center;
 }
 
 .color-input-label input {
@@ -48,28 +49,69 @@ label,
   margin: 10px;
 }
 
+
 .switcher {
   display: flex;
+  align-items: center;
+  /* Add this line to vertically align items */
   margin: 30px;
 }
 
 .switch {
   border: 1px solid cornflowerblue;
   background: floralwhite;
-  border-radius: 10px;
-  width: 40px;
-  height: 19px;
-}
-
-input[type="checkbox" i] {
+  border-radius: 15px;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  text-align: unset;
+  position: relative;
+  /* Add this line */
+  box-shadow: inset 0px 3px 4px 1px rgba(0, 0, 0, .3), 0px 0px 0px 0px rgba(255, 255, 255, .8);
   transition: ease-in-out 0.3s;
-  vertical-align: top;
 }
 
-input[type="checkbox" i]:checked {
-  transform: translateX(17px);
+.switch:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 3px;
+  background-color: antiquewhite;
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 0px 2px 0px rgba(255, 255, 255, .8);
+  transition: transform ease-in-out 0.3s;
+  /* Change the transition property */
 }
 
+/* Using sibling selector ~ */
+input[type="checkbox"]:checked+.switch {
+  background-color: rgb(54, 54, 89);
+}
+
+/* Using sibling selector ~ */
+input[type="checkbox"]:checked~.switch:before {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  transform: translateX(30px);
+  /* Change from 'left' to 'transform' */
+  background-color: rgb(89 87 104);
+}
+
+.switch:hover {
+  background-color: rgb(213 221 221);
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+}
+
+.switcher input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* media queries */
 @media screen and (min-width: 1024px) {
   .app-container {
     margin: 20px 35%;
