@@ -8,7 +8,7 @@ colorInput.addEventListener("change", setInputColorBox);
 function setInputColorBox() {
   if (colorInput.value[0] != '#' && colorInput.value != '') {
     errorEl.style.display = 'block';
-    errorEl.textContent = 'Not a hex value!';
+    errorEl.textContent = 'Not a valid hex value!';
     return; // ends execution here.
   }
 
