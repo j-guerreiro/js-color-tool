@@ -111,6 +111,13 @@ input[type="checkbox"]:checked~.switch:before {
   opacity: 0;
 }
 
+.warning {
+  font-weight: 600;
+  color: #ff6767;
+  background-color: rgb(187, 240, 133);
+  border-radius: 15px;
+}
+
 /* media queries */
 @media screen and (min-width: 1024px) {
   .app-container {
