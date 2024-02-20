@@ -23,7 +23,6 @@ function setInputColorBox() {
   let hexValue = colorInput.value.slice(1);
   // Transform the hex base number into dec.
   let decValue = parseInt(hexValue, 16);
-  console.log(decValue * 0.5);
   colorBoxOut.style.backgroundColor = colorInput.value;
 
   // todo - find a way to separate the rgb values from the string.
